@@ -3,7 +3,7 @@
 ////
 
 /// Font family for button elements.
-$button-font-family: inherit !default;
+$button-font-family: $font-sans-alt !default;
 
 /// Padding inside buttons.
 $button-padding: 0.85em 1em !default;
@@ -34,16 +34,16 @@ $button-hollow-border-width: 2px !default;
 
 /// Sizes for buttons.
 $button-sizes: (
-  tiny: 0.75rem,
-  small: 1rem,
+  tiny: 1rem,
+  small: 1.2rem,
   default: 1.6rem,
   large: 2rem,
 ) !default;
 
 /// Coloring classes. A map of classes to output in your CSS, like `.secondary`, `.success`, and so on.
 $button-palette: (
-  primary:                      #004fdc,
-  secondary:                    #e31c3d,
+  primary:                      #0077da,
+  secondary:                    #00bed5,
 ) !default;
 
 /// opacity for a disabled button.

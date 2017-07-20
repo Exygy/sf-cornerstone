@@ -8,9 +8,10 @@ $font-stack-monaco: 'Monaco', 'Consolas', 'Lucida Console';
 
 /// Base Font Family Map
 $base-font-families: (
-  monospace:  "'Source Code Pro', #{$font-stack-monaco}",
-  sans-serif: "'Noto Sans', #{$font-stack-helvetica}",
-  serif:      "'Noto Serif', #{$font-stack-georgia}"
+  monospace:      "#{$font-stack-monaco}",
+  sans-serif:     "'Open Sans', #{$font-stack-helvetica}",
+  sans-alt:       "'Lato', #{$font-stack-helvetica}",
+  serif:          "'Droid Serif', #{$font-stack-georgia}"
 ) !default;
 
 /// Base Font Family Setting.
@@ -42,8 +43,11 @@ $lead-line-height:    1.7 !default;
 
 $font-sans:           unquote(map-get($base-font-families, sans-serif)) !default;
 $font-serif:          unquote(map-get($base-font-families, serif)) !default;
+$font-sans-alt:       unquote(map-get($base-font-families, sans-alt)) !default;
 
+$font-thin:           300 !default;
 $font-normal:         400 !default;
 $font-bold:           700 !default;
+$font-black:          900 !default;
 
 $text-max-width:      53rem !default;

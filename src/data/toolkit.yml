@@ -1,8 +1,44 @@
 colors:
-  primary:
-    Dark: "rgb(30, 30, 30)"
-    Light: "rgb(242, 242, 242)"
-  secondary:
-    Red: "rgb(201, 55, 6)"
-    Yellow: "rgb(252, 207, 80)"
-    Blue: "rgb(39, 102, 143)"
+  primary-color:
+    primary:                      '#0077da'
+    primary-darker:               '#205493'
+    primary-darkest:              '#112e51'
+  primary-alt-color:  
+    primary-alt:                  '#008fff'
+    primary-alt-dark:             '#0082E6'
+    primary-alt-darker:           '#006EC2'
+    primary-alt-darkest:          '#004070'
+    primary-alt-light:            '#9bdaf1'
+    primary-alt-lightest:         '#e1f3f8'
+  secondary-color:  
+    secondary:                    '#00bed5'
+    secondary-dark:               '#0097A8'
+    secondary-darkest:            '#008A99'
+    secondary-light:              '#96DCE4'
+    secondary-lightest:           '#CBEFF1'
+  base-color:
+    white:                        '#ffffff'
+    base:                         '#212121'
+    black:                        '#000000'
+  grey-color:
+    grey:                         '#5b616b'
+    grey-dark:                    '#323a45'
+    grey-medium:                  '#757575'
+    grey-light:                   '#aeb0b5'
+    grey-lighter:                 '#d6d7d9'
+    grey-lightest:                '#f1f1f1'
+  gold-color:
+    gold:                         '#fdb81e'
+    gold-light:                   '#f9c642'
+    gold-lighter:                 '#fad980'
+    gold-lightest:                '#fff1d2'
+  green-color: 
+    green:                        '#2e8540'
+    green-light:                  '#4aa564'
+    green-lighter:                '#94bfa2'
+    green-lightest:               '#e7f4e4'
+  red-color: 
+    red:                          '#e31c3d'
+    red-light:                    '#E7405C'
+    red-lighter:                  '#EC697F'
+    red-lightest:                 '#f9d2d8'

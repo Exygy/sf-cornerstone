@@ -16,19 +16,21 @@
   // First, we marge this default color palette with the cornerstone color palette we set up in `variables/color`
   $_default-color-palette: map-merge((
     // Branded color palette
-      primary:                      #0071bc,
-      primary-darker:               #205493,
-      primary-darkest:              #112e51,
-      primary-alt-dark:             #02bfe7,
-      primary-alt-darker:           #00a6d2,
-      primary-alt-darkest:          #046b99,
-      primary-alt-light:            #9bdaf1,
-      primary-alt-lightest:         #e1f3f8,
-      secondary:                    #e31c3d,
-      secondary-dark:               #cd2026,
-      secondary-darkest:            #981b1e,
-      secondary-light:              #e59393,
-      secondary-lightest:           #f9dede,
+      primary:                      #0077da,
+      primary-darker:               #f90f90,
+      primary-darkest:              #205493,
+      primary-alt:                  #008fff,
+      primary-alt-dark:             #0067be,
+      primary-alt-darker:           #00579E,
+      primary-alt-darkest:          #004070,
+      primary-alt-light:            #ffebcc,
+      primary-alt-lightest:         #daeeff,
+      secondary:                    #00bed5,
+      secondary-dark:               #0097A8,
+      secondary-darker:             #008A99,
+      secondary-darkest:            #006E7A,
+      secondary-light:              #3CBECD,
+      secondary-lightest:           #CBEFF1,
 
     // Base color palette
     // 
@@ -50,10 +52,10 @@
       green-light:                  #4aa564,
       green-lighter:                #94bfa2,
       green-lightest:               #e7f4e4,
-      blue:                         #205493,
-      blue-light:                   #4773aa,
-      blue-lighter:                 #8ba6ca,
-      blue-lightest:                #dce4ef,
+      red:                          #e31c3d,
+      red-light:                    #E7405C,
+      red-lighter:                  #EC697F,
+      red-lightest:                 #f9d2d8,
 
     // Functional color palette
     // 

@@ -26,9 +26,11 @@
   transition: $button-transition;
 
   font-size: map-get($button-sizes, default);
+  letter-spacing: 1px;
   line-height: 1;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
