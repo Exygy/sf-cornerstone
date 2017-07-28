@@ -26,7 +26,7 @@
   transition: $button-transition;
 
   font-size: map-get($button-sizes, default);
-  letter-spacing: 1px;
+  letter-spacing: $letter-spacing-large;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -104,8 +104,9 @@
   color: $color;
 
   &:hover, &:focus {
-    border-color: $color-hover;
-    color: $color-hover;
+    background-color: $button-background;
+    border-color: $button-background;
+    color: color(white);
     &.disabled,
     &[disabled] {
       border: $border-width solid $color;

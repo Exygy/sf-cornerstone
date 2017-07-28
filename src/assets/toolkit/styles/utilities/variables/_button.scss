@@ -6,7 +6,7 @@
 $button-font-family: $font-sans-alt !default;
 
 /// Padding inside buttons.
-$button-padding: 0.85em 1em !default;
+$button-padding: 1.24em 2em !default;
 
 /// Margin around buttons.
 $button-margin: 0 0 1em 0 !default;
@@ -35,7 +35,7 @@ $button-hollow-border-width: 2px !default;
 /// Sizes for buttons.
 $button-sizes: (
   tiny: 1rem,
-  small: 1.2rem,
+  small: 1.3rem,
   default: 1.6rem,
   large: 2rem,
 ) !default;

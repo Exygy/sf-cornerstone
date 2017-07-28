@@ -4,34 +4,42 @@
 
 @mixin h1 {
   font-size: $h1-font-size;
-  font-weight: $font-normal;
+
+  @include grid-media($media-md) {
+    font-size: $h1-font-size-md;
+  }
 }
 
 @mixin h2 {
   font-size: $h2-font-size;
-  font-weight: $font-normal;
+
+  @include grid-media($media-md) {
+    font-size: $h2-font-size-md;
+  }
 }
 
 @mixin h3 {
   font-size: $h3-font-size;
-  font-weight: $font-normal;
+
+  @include grid-media($media-md) {
+    font-size: $h3-font-size-md;
+  }
 }
 
 @mixin h4 {
   font-size: $h4-font-size;
-  font-weight: $font-normal;
+
+  @include grid-media($media-md) {
+    font-size: $h4-font-size-md;
+  }
 }
 
 @mixin h5 {
   font-size: $h5-font-size;
-  font-weight: $font-normal;
 }
 
 @mixin h6 {
-  font-family: $font-sans;
   font-size: $h6-font-size;
-  font-weight: $font-normal;
-  text-transform: uppercase;
 }
 
 @mixin font-smoothing {
@@ -48,4 +56,12 @@
   > li {
     margin-bottom: 0;
   }
+}
+
+@mixin h-caps($border-bottom: 0) {
+  font-weight: $font-bold;
+  display: inline-block;
+  font-family: $font-sans-alt;
+  letter-spacing: $header-spacing-large;
+  text-transform: uppercase;
 }
