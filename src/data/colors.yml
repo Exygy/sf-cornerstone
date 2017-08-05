@@ -1,0 +1,19 @@
+accessibility:
+  white_background:
+    - name: 'primary'
+      hex: '#0077da'
+      bg_name: 'white'
+      bg_hex: '#ffffff'
+    - name: 'primary-darker'
+      hex: '#205493'
+      bg_name: 'white'
+      bg_hex: '#ffffff'
+  color_background:
+    - name: 'primary'
+      hex: '#f9f9f9'
+      bg_name: 'white'
+      bg_hex: '#ffffff'
+    - name: 'primary-darker'
+      hex: '#f9f9f9'
+      bg_name: 'white'
+      bg_hex: '#ffffff'

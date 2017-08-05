@@ -41,3 +41,29 @@ fabricator: true
 <h4>Heading Level 4</h4>
 <h5>Heading Level 5</h5>
 <h6>Heading Level 6</h6>
+
+<h2>Accessibility</h2>
+
+<h4>Color on white background</h4>
+<div class="f-color-chips-alt">
+  {{#each colors.accessibility.white_background}}
+  <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
+    <div class="f-color-chip__label-alt" style="color: {{hex}}">
+      <span class="f-color-chip__text-name">{{name}}</span> on
+      <span class="f-color-chip__name">{{bg_name}}</span>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<h4>Neutral on color background</h4>
+{{#each colors.accessibility.color_background}}
+  <div class="f-color-chips-alt">
+    <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
+      <div class="f-color-chip__label-alt" style="color: {{hex}}">
+        <span class="f-color-chip__text-name">{{name}}</span> on
+        <span class="f-color-chip__name">{{bg_name}}</span>
+      </div>
+    </div>
+  </div>
+{{/each}}
