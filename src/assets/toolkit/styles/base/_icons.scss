@@ -1,0 +1,44 @@
+////
+/// Icons
+////
+
+//
+// Inline SVG
+// <svg>
+//     <use xlink:href="#i-svg-{{icon}}"></use>
+// </svg>
+//
+
+.i-svg {
+  display: inline-block;
+  fill: currentcolor;
+  position: relative;
+  stroke-width: 0;
+  height: 1em;
+  width: 1em;
+}
+
+.i-tiny {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.i-small {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.i-medium {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.i-large {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.i-xlarge {
+  width: 4rem;
+  height: 4rem;
+}
