@@ -45,25 +45,49 @@ fabricator: true
 <h2>Accessibility</h2>
 
 <h4>Color on white background</h4>
-<div class="f-color-chips-alt">
-  {{#each colors.accessibility.white_background}}
-  <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
-    <div class="f-color-chip__label-alt" style="color: {{hex}}">
-      <span class="f-color-chip__text-name">{{name}}</span> on
-      <span class="f-color-chip__name">{{bg_name}}</span>
-    </div>
-  </div>
-  {{/each}}
-</div>
-
-<h4>Neutral on color background</h4>
-{{#each colors.accessibility.color_background}}
+<div class="f-color-chips_container">
   <div class="f-color-chips-alt">
+  {{#each colors.accessibility.white_background.primary}}
     <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
       <div class="f-color-chip__label-alt" style="color: {{hex}}">
         <span class="f-color-chip__text-name">{{name}}</span> on
         <span class="f-color-chip__name">{{bg_name}}</span>
       </div>
     </div>
+  {{/each}}
   </div>
-{{/each}}
+  <div class="f-color-chips-alt">
+  {{#each colors.accessibility.white_background.base}}
+    <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
+      <div class="f-color-chip__label-alt" style="color: {{hex}}">
+        <span class="f-color-chip__text-name">{{name}}</span> on
+        <span class="f-color-chip__name">{{bg_name}}</span>
+      </div>
+    </div>
+  {{/each}}
+  </div>
+</div>
+
+<h4>Neutral on color background</h4>
+<div class="f-color-chips_container">
+  <div class="f-color-chips-alt">
+    {{#each colors.accessibility.color_background.primary}}
+      <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
+        <div class="f-color-chip__label-alt" style="color: {{hex}}">
+          <span class="f-color-chip__text-name">{{name}}</span> on
+          <span class="f-color-chip__name">{{bg_name}}</span>
+        </div>
+      </div>
+    {{/each}}
+   </div>
+   <div class="f-color-chips-alt">
+    {{#each colors.accessibility.color_background.base}}
+      <div class="f-color-chip-alt" style="background-color: {{bg_hex}}">
+        <div class="f-color-chip__label-alt" style="color: {{hex}}">
+          <span class="f-color-chip__text-name">{{name}}</span> on
+          <span class="f-color-chip__name">{{bg_name}}</span>
+        </div>
+      </div>
+    {{/each}}
+   </div>
+</div>

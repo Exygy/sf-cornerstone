@@ -31,14 +31,18 @@
 }
 
 .f-color-chips-alt {
-	display: flex;
-	flex-wrap: wrap;
+	@media (min-width: 60em) {
+		float: left;
+		width: 47.5%;
+		margin-right: 5%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 .f-color-chip-alt {
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 100%;
 	background-color: #fff;
 	font-weight: 700;
 	font-size: 0.75em;
@@ -47,9 +51,7 @@
   box-sizing: border-box;
   border: 1px solid #efefef;
 
-	@media (min-width: 60em) {
-		flex-basis: 13em;
-	}
+	
 
 	.f-color-chip__color-alt {
 		font-weight: 400;
