@@ -5,13 +5,4 @@
 @import "vendors/vendors";
 @import "utilities/utilities";
 @import "base/base";
-
-.block {
-  @include grid-container;
-}
-
-.block-image, .block-content {
-  @include grid-media($media-md) {
-    @include grid-column(6);
-  }
-}
+@import "components/components";

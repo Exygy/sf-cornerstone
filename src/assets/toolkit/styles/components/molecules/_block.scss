@@ -1,0 +1,66 @@
+////
+/// Block
+////
+
+.block {
+  a {
+    text-decoration: none;
+    color: color(base);
+
+    &:hover {
+
+    }
+  }
+
+  &.is-centered {
+    text-align: center;
+  }
+}
+
+.block_image {
+  margin-bottom: 2rem;
+
+  &.has-svg {
+    position: relative;
+
+    &:after {
+      @include center-transform(x);
+      background-color: color(primary);
+      bottom: -1rem;
+      content: '';
+      display: block;
+      height: 3px;
+      width: 7.5rem;
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  svg {
+    @include margin(2rem auto 0);
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+
+.block_content {
+  @include padding(null 5.5rem);
+
+  @include grid-media($media-md) {
+    padding: 0;
+  }
+}
+
+.block_title {
+  @include h3();
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.block_subtitle {
+  @include h6();
+
+  margin-top: 0;
+}

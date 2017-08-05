@@ -1,0 +1,18 @@
+////
+/// Layout containers
+////
+
+.page-container {
+  @include container;
+}
+
+.center-section {
+  @include grid-media($media-md) {
+    margin: 0 auto;
+    max-width: $text-max-width;
+  }
+}
+
+.full-container {
+  @include full-container;
+}
