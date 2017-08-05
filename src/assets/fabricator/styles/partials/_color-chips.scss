@@ -31,6 +31,8 @@
 }
 
 .f-color-chips-alt {
+	margin-bottom: 2em;
+	
 	@media (min-width: 60em) {
 		float: left;
 		width: 47.5%;
@@ -47,7 +49,6 @@
 	font-weight: 700;
 	font-size: 0.75em;
 	padding: 2em;
-	margin-bottom: 2em;
   box-sizing: border-box;
   border: 1px solid #efefef;
 
