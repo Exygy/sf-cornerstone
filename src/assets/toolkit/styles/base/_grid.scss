@@ -4,9 +4,7 @@
 
 // Grid container
 .row {
-  @include grid-container;
-  max-width: $max-container-width;
-  margin: 0 auto;
+  @include row;
 }
 
 // Grid items

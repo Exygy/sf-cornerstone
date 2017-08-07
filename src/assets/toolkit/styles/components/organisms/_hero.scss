@@ -1,0 +1,38 @@
+////
+/// Hero
+////
+
+.hero {
+  @include image-gradient;
+  background-size: cover;
+
+  &.is-tall {
+    .hero_container {
+      padding-top: 20rem;
+
+      @include grid-media($media-md) {
+        padding-top: 50rem;
+      }
+    }
+  }
+}
+
+.hero_container {
+  @include container;
+  @include padding(3rem null);
+  position: relative;
+}
+
+.hero_header {
+  color: color(white);
+}
+
+.hero_title {
+  margin-top: 0;
+  text-shadow: $text-shadow;
+}
+
+.hero_subtitle {
+  @include h5;
+  text-shadow: $text-shadow;
+}

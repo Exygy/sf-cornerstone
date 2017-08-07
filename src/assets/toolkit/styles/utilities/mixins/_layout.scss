@@ -1,16 +1,14 @@
+@mixin row {
+  @include grid-container;
+  max-width: $max-container-width;
+  margin: 0 auto;
+}
+
 @mixin container {
   @include grid-container;
   @include padding(null 2.5rem);
   max-width: $max-container-width;
   margin: 0 auto;
-
-  @include grid-media($media-md) {
-    @include padding(null 5rem);
-  }
-
-  @include grid-media($media-lg) {
-    @include padding(null 10rem);
-  }
 }
 
 @mixin center-column {

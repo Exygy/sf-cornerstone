@@ -15,3 +15,22 @@ $aspect-width: 16;
   display: inline-block;
   line-height: 0;
 }
+
+@mixin image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.35)) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, .3));
+    content: "";
+    display: block;
+  }
+
+  img {
+    display: block;
+  }
+}
