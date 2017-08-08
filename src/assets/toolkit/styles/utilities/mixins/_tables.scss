@@ -1,0 +1,136 @@
+////
+/// Table Mixins
+////
+
+@mixin table {
+  border: $table-border;
+  border-collapse: collapse;
+  font-size: $table-font-size;
+  margin: 0 0 $global-margin 0;
+  table-layout: auto;
+  text-align: left;
+  width: 100%;
+
+  @at-root {
+    @include -table-element-styles;
+  }
+}
+
+@mixin -table-element-styles($stripe: $table-stripe) {
+  thead {
+    background: $table-head-background;
+    font-size: $table-head-font-size;
+    text-transform: uppercase;
+    vertical-align: bottom;
+
+    th {
+      border-bottom: $table-head-border;
+      color: $table-head-color;
+      letter-spacing: 0.1rem;
+      padding: ($table-padding * 1.2) $table-padding;
+    }
+  }
+
+  tbody {
+    @include -table-stripe($stripe);
+    vertical-align: top;
+  }
+
+  th,
+  td {
+    color: $table-body-color;
+    font-weight: $table-font-weight;
+    line-height: $table-line-height;
+    padding: $table-padding;
+  }
+
+  em, small {
+    font-size: $table-font-size * 0.785714; // 11px
+    line-height: $table-line-height * 0.833333; // 1.25
+    font-style: normal;
+  }
+
+  em {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  &.unstriped {
+    tbody {
+      @include -table-unstripe();
+      background-color: $table-background;
+    }
+  }
+
+  tbody tr.highlighted {
+    background: $table-highlight-background;
+    border-bottom: 1px solid color(white);
+
+    td:first-of-type {
+      box-shadow: inset 3px 0px 0px 0px $table-highlight-border-color;
+    }
+  }
+}
+
+@mixin table-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+@mixin table-stack($header: $show-header-for-stacked) {
+  @if $header {
+    thead {
+      th {
+        display: block;
+      }
+    }
+  }
+  @else {
+    thead {
+      display: none;
+    }
+  }
+
+  tfoot {
+    display: none;
+  }
+
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  td {
+    border-top: 0;
+  }
+}
+
+
+@mixin -table-stripe($stripe: $table-stripe) {
+  tr {
+    // If stripe is set to even, darken the even rows.
+    @if $stripe == even {
+      &:nth-child(even) {
+        border-bottom: 0;
+        background-color: $table-striped-background;
+      }
+    }
+
+    // If stripe is set to odd, darken the odd rows.
+    @else if $stripe == odd {
+      &:nth-child(odd) {
+        background-color: $table-striped-background;
+      }
+    }
+  }
+}
+
+@mixin -table-unstripe() {
+  tr {
+    border-bottom: 0;
+    border-bottom: $table-border;
+    background-color: $table-background;
+  }
+}
