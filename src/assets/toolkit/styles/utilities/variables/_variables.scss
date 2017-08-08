@@ -12,13 +12,15 @@
 @import 'neat-omega/neat-omega';
 
 // Base settings.
-@import 'fonts';
 @import 'typography';
-@import 'breakpoints';
 @import 'colors';
-@import 'borders';
-@import 'button';
 @import 'spacing';
+
+@import 'borders';
+@import 'breakpoints';
+@import 'button';
+@import 'fonts';
+@import 'forms';
 @import 'tables';
 
 

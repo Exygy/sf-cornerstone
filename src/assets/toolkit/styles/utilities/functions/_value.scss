@@ -1,0 +1,21 @@
+////
+/// Value Functions
+////
+
+/// Determine if a value is not falsey, in CSS terms. Falsey values are `null`, `none`, `0` with any unit, or an empty list.
+///
+/// @param {Mixed} $val - Value to check.
+///
+/// @returns {Boolean} `true` if `$val` is not falsey.
+@function has-value($val) {
+  @if $val == null or $val == none {
+    @return false;
+  }
+  @if type-of($val) == 'number' and strip-unit($val) == 0 {
+    @return false;
+  }
+  @if type-of($val) == 'list' and length($val) == 0 {
+    @return false;
+  }
+  @return true;
+}
