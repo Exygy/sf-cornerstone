@@ -25,8 +25,10 @@ $monospace-font-family: unquote(map-get($base-font-families, monospace)) !defaul
 
 // Typography
 // Removing the !default from $em-base so we are not inheriting that
-// value from Bourbon.
-$em-base:             10px;
+// value from Bourbon. Use percentage to respect user browser settings
+// for text size. Set to equivalent of 10px for "base 10" rem sizes
+// i.e. 1.6rem == 16px
+$em-base:             62.5%; // 10px
 $base-font-size:      1.6rem !default;
 $small-font-size:     1.3rem !default;
 $lead-font-size:      2rem !default;
