@@ -15,6 +15,24 @@
   &.is-centered {
     text-align: center;
   }
+
+  &.block-inline {
+    @include grid-media($media-md) {
+      @include grid-container;
+    }
+
+    .block_image {
+      @include grid-media($media-md) {
+        @include grid-column(6);
+      }
+    }
+
+    .block_content {
+      @include grid-media($media-md) {
+        @include grid-column(6);
+      }
+    }
+  }
 }
 
 .block_image {
@@ -46,9 +64,9 @@
 }
 
 .block_content {
-  @include padding(null 5.5rem);
+  @include padding(null 2.5rem);
 
-  @include grid-media($media-md) {
+  @include grid-media($media-lg) {
     padding: 0;
   }
 }
