@@ -1,16 +1,24 @@
-<div class="block {{ classes }} {{#if image}}has-image {{/if}}">
+<div class="block{{#if classes}} {{classes}}{{/if}}{{#if image}} has-image{{/if}}">
   {{#if image}}
-  <div class="block_image {{#if has_svg}}has-svg {{/if}}">
+  <div class="block_image{{#if has_svg}} has-svg{{/if}}">
+    {{#if img}}
+    <a href="#">
+      <img src="{{default img 'https://digitalservices.sfgov.org/assets/gg-bg.jpg'}}">
+    </a>
+    {{/if}}
+    {{#if has_svg}}
     <svg class="i-svg">
       <use xlink:href="#i-{{default svg 'info'}}"></use>
     </svg>
+    {{/if}}
   </div>
   {{/if}}
   <div class="block_content">
     <h4 class="block_title"><a href="#">{{default title 'Digital Services Strategy'}}</a></h4>
+    {{#if subtitle}}
     <p class="block_subtitle"><a href="#">{{default subtitle 'San Francisco’s Digital Services Strategy is about transforming the customer experience of City services.'}}</a></p>
-
-    {{#if button}}
+    {{/if}}
+    {{#if has_button}}
       {{> button classes="small hollow" name="Read More"}}
     {{/if}}
   </div>

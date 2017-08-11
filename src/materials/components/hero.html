@@ -1,4 +1,4 @@
-<div class="hero {{ classes }}" style="background-image:url('https://digitalservices.sfgov.org/assets/gg-bg.jpg')">
+<div class="hero{{#if classes}} {{classes}}{{/if}}" style="background-image:url('{{ default image 'https://digitalservices.sfgov.org/assets/gg-bg.jpg' }}')">
   <div class="hero_container">
   <div class="hero_header">
     <h1 class="hero_title">{{default title 'Culture of high performance'}}</h1>
