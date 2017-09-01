@@ -341,6 +341,7 @@ fabricator.accordions = () => {
   for(var i = 0; i < fabricator.dom.menuAccordions.length; i++) {
 
     fabricator.dom.menuAccordions[i].addEventListener('click', function (e) {
+      e.preventDefault();
       setActiveAccordion(e);
     });
     fabricator.dom.menuAccordions[i].parentNode.querySelectorAll('.control')[0].addEventListener('click', function(e) {
