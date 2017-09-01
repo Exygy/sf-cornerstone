@@ -46,6 +46,25 @@
     //   }
     // }
   }
+
+  input[type="checkbox"] {
+    &:checked + label::before {
+      background-image: url('../images/check.png');
+      background-image: url('../images/check.svg');
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+
+    &:focus + label::before {
+      box-shadow: 0 0 0 1px color(white), 0 0 3px 4px color(primary);
+    }
+  }
+
+  input[type="radio"]:focus + label::before {
+    box-shadow: 0 0 0 2px color(white), 0 0 0 3px color(primary), 0 0 3px 4px $input-color-focus, 0 0 7px 4px $input-color-focus;
+  }
+
+
 }
 
 @mixin form-element {
