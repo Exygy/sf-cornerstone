@@ -5,10 +5,10 @@
   "license": "GPL-3.0",
   "homepage": "http://github.com/Exygy/sf-cornerstone-fabricator",
   "scripts": {
-    "prestart": "yarn install",
-    "build": "yarn run prestart && gulp",
+    "prestart": "npm install",
+    "build": "npm run prestart && gulp",
     "start": "gulp --dev",
-    "test": "yarn run build"
+    "test": "npm run build"
   },
   "engines": {
     "node": ">=4.0",
