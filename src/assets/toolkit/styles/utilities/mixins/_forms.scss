@@ -49,10 +49,11 @@
 
   input[type="checkbox"] {
     &:checked + label::before {
-      background-image: url('../images/check.png');
-      background-image: url('../images/check.svg');
+      background-image: url('../images/check-thick-white.png');
+      background-image: url('../images/check-thick-white.svg');
       background-position: 50%;
       background-repeat: no-repeat;
+      background-size: 80%;
     }
 
     &:focus + label::before {
@@ -144,9 +145,15 @@
   select {
     appearance: none;
     background-color: $input-background;
+    background-image: url('../images/arrow-down.png');
+    background-image: url('../images/arrow-down.svg');
+    background-position: right 1.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.4rem;
     color: $input-color;
     font-family: $base-font-family;
     font-size: $input-font-size;
+    height: 4.5rem;
     padding: $input-padding;
     padding-right: $input-padding * 3.5;
     width: 100%;
