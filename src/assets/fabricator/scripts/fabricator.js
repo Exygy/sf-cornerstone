@@ -173,8 +173,8 @@ fabricator.menuToggle = () => {
   });
 
   // close menu when clicking on item (for collapsed menu view)
-  const closeMenu = () => {
-    if (!window.matchMedia(fabricator.options.mq).matches) {
+  const closeMenu = (e) => {
+    if (!window.matchMedia(fabricator.options.mq).matches && !e.target.classList.contains('f-menu__accordion-toggle')) {
       toggleClasses();
     }
   };
