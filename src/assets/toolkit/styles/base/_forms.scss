@@ -7,3 +7,7 @@
 .radio {
   @include cornerstone-radio;
 }
+
+select {
+  @include form-select;
+}
