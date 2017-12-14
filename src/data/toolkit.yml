@@ -1,15 +1,15 @@
 colors:
   primary-color:
-    primary:                      '#0077da'
-    primary-darker:               '#205493'
-    primary-darkest:              '#112e51'
+    primary:                      '#388ACE'
+    primary-dark:                 '#0173B1'
+    primary-darker:               '#2E365B'
+    primary-light:                '#CCE4F6'
+    primary-lighter:              '#F4F6FC'
   primary-alt-color:  
-    primary-alt:                  '#008fff'
-    primary-alt-dark:             '#0082E6'
-    primary-alt-darker:           '#006EC2'
-    primary-alt-darkest:          '#004070'
-    primary-alt-light:            '#9bdaf1'
-    primary-alt-lightest:         '#e1f3f8'
+    primary-alt:                  '#008FFF'
+    primary-alt-dark:             '#0071C7'
+    primary-alt-darker:           '#04589C'
+    primary-alt-darkest:          '#00437A'
   secondary-color:  
     secondary:                    '#00bed5'
     secondary-dark:               '#0097A8'
@@ -21,12 +21,16 @@ colors:
     base:                         '#212121'
     black:                        '#000000'
   grey-color:
-    grey:                         '#5b616b'
-    grey-dark:                    '#323a45'
-    grey-medium:                  '#757575'
-    grey-light:                   '#aeb0b5'
-    grey-lighter:                 '#d6d7d9'
-    grey-lightest:                '#f1f1f1'
+    grey:                         '#474C62'
+    grey-dark:                    '#3f4561'
+    grey-darkest:                 '#2c3044'
+    grey-medium:                  '#A0B2C0'
+    grey-light:                   '#bfc9d4'
+    grey-lighter:                 '#eff2f8'
+    grey-lightest:                '#f4f6fc'
+    warm-grey-lighter:            '#d9dadf'
+    warm-grey-lightest:           '#e7e7e7'
+    
   gold-color:
     gold:                         '#fdb81e'
     gold-light:                   '#f9c642'
