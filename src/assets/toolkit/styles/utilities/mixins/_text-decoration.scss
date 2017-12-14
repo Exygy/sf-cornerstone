@@ -1,0 +1,118 @@
+@mixin has-dash($dash-color: gold) {
+  position: relative;
+  padding-bottom: 1em;
+
+  &:after {
+    @include position(absolute, null null 0 0);
+    background-color: color($dash-color);
+    content: '';
+    height: 2px;
+    width: 5rem;
+  }
+}
+
+@mixin custom-counter() {
+  counter-increment: step-counter;
+  position: relative;
+
+  &::before {
+    @include position(absolute, -7px null null -7px);
+    @include padding(.625rem);
+    background-color: color(primary);
+    border: 7px solid color(white);
+    border-radius: 50%;
+    color: color(white);
+    content: counter(step-counter);
+    height: 4.4rem;
+    line-height: 1;
+    text-align: center;
+    width: 4.4rem;
+  }
+}
+
+@mixin custom-counter-line() {
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border: 1px solid color(grey-lighter);
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    z-index: -1;
+  }
+
+  &:last-of-type {
+    &:after {
+      height: 0;
+    }
+  }
+}
+
+@mixin timeline-dot() {
+  &:before {
+    @include position(absolute, null null -1.9rem null);
+    background-color: color(primary);
+    border: 1px solid color(white);
+    border-radius: 50%;
+    content: "";
+    height: 1rem;
+    line-height: 1;
+    text-align: center;
+    width: 1rem;
+    z-index: 2;
+  }
+}
+
+@mixin timeline-line() {
+  &:after {
+    @include position(absolute, null null -1.5rem null)
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 1px solid color(grey-lighter);
+    z-index: 1;
+  }
+}
+
+@mixin drop-cap-inline() {
+  &:first-of-type::first-line {
+    position: relative;
+    font-size: 1em;
+    letter-spacing: normal;
+  }
+
+  &:first-child::first-letter {
+    color: color(red);
+    letter-spacing: 0;
+    font-family: $font-serif;
+    font-size: 6rem;
+    font-weight: normal;
+    float: left;
+    margin: 0.13em 0.1em 0 0;
+    line-height: 0.7;
+  }
+}
+
+@mixin counter-list() {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    @include margin(null null 0 null);
+    @include padding(null null 3rem 5rem);
+    @include custom-counter();
+  }
+
+  strong {
+    @include margin(0 null null null);
+    font-size: 1.8rem;
+    font-weight: $font-bold;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,56 @@
+////
+/// Section Article Cards
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+
+.section-article-cards {
+  @include padding(null null 7rem null);
+
+  &.has-background-color {
+    @include padding(7rem null 7rem null);
+    background-color: color(grey-lightest);
+
+    .article-card {
+      background-color: color(white);
+    }
+  }
+}
+
+.section-article-cards_container {
+  @include centered-container;
+}
+
+.section-article-cards_header {
+  @include grid-column(12);
+  margin-bottom: 3rem;
+}
+
+.section-article-cards_content {
+  @include grid-column(12);
+}
+
+.section-article-cards_grid {
+  @include grid-container;
+  
+  @include grid-media($media-md) {
+    @include grid-collapse;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article-card,
+  .social-card {
+    margin-bottom: 3rem;
+
+    @include grid-media($media-md) {
+      @include grid-column(6);
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-column(4);
+      margin-bottom: 0;
+    }
+  }
+}

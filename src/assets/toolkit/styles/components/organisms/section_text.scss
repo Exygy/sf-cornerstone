@@ -1,0 +1,35 @@
+////
+/// Section Text
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+
+.section-text {
+  @include padding(null null 7rem null);
+}
+
+.section-text_container {
+  @include centered-container;
+}
+
+.section-text_column {
+  @include grid-column(12);
+  @include first-last-spacing();
+
+  @include grid-media($media-md) {
+    @include grid-column(6);
+  }
+
+  ol {
+    @include counter-list();
+
+    li {
+      line-height: 3rem;
+    }
+
+    strong {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+////
+/// Section Card Mesh
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+@import '../../molecules/card_grid/card_grid';
+
+.section-cards {
+  @include padding(null null 7rem null);
+
+  &.has-background-color {
+    @include padding(7rem null 7rem null);
+    background-color: color(grey-lightest);
+    margin-bottom: 7rem;
+  }
+  &.no-background-color {
+    background: none;
+  }
+}
+
+.section-cards_header {
+  @include grid-container;
+
+  .header-group {
+    @include grid-column(12);
+  }
+}
+
+.section-cards_container {
+  @include centered-container;
+}

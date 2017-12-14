@@ -1,0 +1,50 @@
+////
+/// Nested Card
+////
+
+// Variant
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.nested-card {
+  background-color: color(grey-lightest);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    line-height: 2.5rem;
+  }
+}
+
+.nested-card_title {
+  @include margin(0 null 1rem null);
+  @include h5();
+  font-family: $font-sans;
+  font-weight: $font-bold;
+}
+
+.nested-card_subtitle {
+  @include margin(0 null 1rem null);
+  font-size: 1.6rem;
+}
+
+.nested-card_link {
+  font-size: 1.6rem;
+}
+
+.nested-card_parent {
+  @include padding(3rem);
+}
+
+.nested-card_child {
+  @include padding(3rem);
+  background-color: color(white);
+  margin-top: 3rem;
+}

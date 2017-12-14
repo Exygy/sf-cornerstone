@@ -1,0 +1,31 @@
+////
+/// Section Text
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+
+.section-meetings {
+  @include padding(null null 7rem null);
+}
+
+.section-meetings_container {
+  @include centered-container;
+}
+
+.section-meetings_header {
+  @include grid-column(12);
+
+  @include grid-media($media-md) {
+    @include grid-column(4);
+    padding-right: 4rem;
+  }
+}
+
+.section-meetings_content {
+  @include grid-column(12);
+
+  @include grid-media($media-md) {
+    @include grid-column(8);
+  }
+}

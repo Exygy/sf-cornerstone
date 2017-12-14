@@ -1,12 +1,11 @@
-@mixin row {
+@mixin centered-container {
   @include grid-container;
   max-width: $max-container-width;
   margin: 0 auto;
 }
 
-@mixin container {
+@mixin row {
   @include grid-container;
-  @include padding(null 2.5rem);
   max-width: $max-container-width;
   margin: 0 auto;
 }

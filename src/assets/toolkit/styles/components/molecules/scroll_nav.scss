@@ -1,0 +1,18 @@
+////
+/// Nav Items
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.scroll-nav {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include grid-media($media-md) {
+    padding: 0;
+  }
+}
+
+.scroll-nav_list {
+  @include unstyled-list;
+}

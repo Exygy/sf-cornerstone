@@ -1,0 +1,28 @@
+////
+/// Social Card
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.social-card {
+  @include padding(null null 5rem null);
+  padding: 3rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+
+  &.is-twitter {
+    @include background-dark();
+    background-color: color(primary);
+  }
+}
+
+.social-card_title {
+  @include h4();
+  font-family: $font-sans;
+  font-weight: $font-bold;
+  margin-top: 2rem;
+}
+
+.social-card_date {
+  font-weight: $font-bold;
+}

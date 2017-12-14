@@ -1,0 +1,38 @@
+////
+/// Agenda
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.agenda_tabs {
+  @include margin(0 0 3.5rem 0);
+  @include padding(0);
+
+  border-top: 1px solid #e7e7e7;
+  list-style: none;
+}
+
+.agenda_tab {
+  @include padding(0);
+  @include margin(0);
+
+  display: inline-block;
+  font-weight: 600;
+
+  a {
+    @include padding(1.5rem);
+    @include margin(0 2rem 0 0);
+
+    display: block;
+  }
+
+  &.is-active a {
+    border-bottom: 2px solid #e2524d;
+  }
+}
+
+.agenda_list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}

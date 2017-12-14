@@ -1,0 +1,20 @@
+////
+/// Article
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.article-slat {
+  @include padding(null null 5rem null);
+}
+
+.article-slat_title {
+  @include h3();
+  @include has-dash();
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.article-slat_date {
+  font-weight: $font-bold;
+}

@@ -1,0 +1,166 @@
+////
+/// Postcard
+////
+
+// Variant
+// has-background-image
+// has-inline-media
+// has-image--right
+// has-major-header
+// has-italic-header
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.postcard {
+  @include centered-container;
+  position: relative;
+  max-width: 138rem;
+
+  // Adds background image and white box to header
+  &.has-background-image {
+
+    .postcard_container {
+      @include padding(4rem 0);
+
+      @include grid-media($media-md) {
+        @include padding(4rem);
+      }
+    }
+
+    .postcard_image {
+      @include cover-image();
+      z-index: -1;
+    }
+
+    .postcard_header {
+      background-color: color(white);
+
+      @include grid-media($media-md) {
+        @include grid-column(6);
+        margin-left: 0;
+      }
+    }
+
+    // Shifts header to right had column
+    &.has-header--right {
+      .postcard_header {
+        float: right;
+      }
+    }
+  }
+
+  // Adds media to second column
+  &.has-inline-image {
+    @include padding(3rem 0);
+    background-color: color(grey-lightest);
+    margin-bottom: 5rem;
+
+    @include grid-media($media-md) {
+      @include padding(3rem);
+    }
+
+    @include grid-media($media-lg) {
+      @include padding(4rem);
+    }
+
+    .postcard_container {
+      background-color: color(white);
+
+      @include grid-media($media-md) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .postcard_header {
+      @include grid-media($media-md) {
+        @include grid-column(6);
+        width: 50%;
+        margin: 0;
+      }
+    }
+
+    .postcard_title {
+      @include h2();
+    }
+
+    .postcard_image {
+      padding-top: 2rem;
+
+      @include grid-media($media-md) {
+        @include grid-column(6);
+        width: 50%;
+        margin: 0;
+        padding-top: 0;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    &.has-header--left {
+      .postcard_header {
+        order: 1;
+      }
+
+      .postcard_image {
+        order: 2;
+      }
+    }
+
+    // Shifts header to right had column
+    &.has-header--right {
+      .postcard_header {
+        order: 2;
+      }
+
+      .postcard_image {
+        order: 1;
+      }
+    }
+  }
+
+  // Add h2 styles
+  &.has-major-header {
+    .postcard_title {
+      @include h2();
+    }
+  }
+
+  // Add italic header
+  &.has-italic-header {
+    .postcard_title {
+      @include h3();
+      font-style: italic;
+    }
+  }
+}
+
+.postcard_image {
+  
+}
+
+.postcard_container {
+  @include grid-container;
+}
+
+.postcard_header {
+  @include first-last-spacing();
+  @include padding(3rem);
+
+  @include grid-media($media-md) {
+    @include padding(4rem);
+  }
+}
+
+.postcard_title {
+  @include h3();
+  @include has-dash();
+}
+
+.postcard_subtitle {
+  p {
+    line-height: 3rem;
+  }
+}

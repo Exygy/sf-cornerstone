@@ -1,0 +1,54 @@
+////
+/// Section Card Mesh
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.section-card-mesh {
+  $card-mesh-columns: (
+    columns: 12,
+    gutter: 0px,
+  );
+
+  @include centered-container;
+  max-width: 138rem;
+
+  &.has-two-columns--md {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      @include grid-column(12, $card-mesh-columns);
+      @include padding(3rem);
+
+      @include grid-media($media-md) {
+        @include grid-column(6, $card-mesh-columns);
+        @include padding(6rem 9rem);
+      }
+
+      &:nth-child(even) {
+        background-color: color(primary-alt-lightest);
+      }
+
+      @include grid-media($media-md) {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(6) {
+          background-color: color(primary-alt-lightest);
+        }
+
+        &:nth-child(1),
+        &:nth-child(4),
+        &:nth-child(5) {
+          background-color: color(white);
+        }
+      }
+    }
+  }
+
+  .card {
+    p {
+      line-height: 3rem;
+    }
+  }
+}

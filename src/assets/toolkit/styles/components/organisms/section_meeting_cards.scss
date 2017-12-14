@@ -1,0 +1,54 @@
+////
+/// Section Meeting Cards
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+
+.section-meeting-cards {
+  @include padding(null null 7rem null);
+}
+
+.section-meeting-cards_container {
+  @include centered-container;
+}
+
+.section-meeting-cards_header {
+  @include grid-column(12);
+  margin-bottom: 3rem;
+
+  @include grid-media($media-lg) {
+    @include grid-column(4);
+    padding-right: 4rem;
+    margin-bottom: 0;
+  }
+}
+
+.section-meeting-cards_content {
+  @include grid-column(12);
+
+  @include grid-media($media-lg) {
+    @include grid-column(8);
+  }
+}
+
+.section-meeting-cards_grid {
+  @include grid-container;
+  
+  @include grid-media($media-md) {
+    @include grid-collapse;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .field {
+    border: 1px solid color(grey-light);
+    margin-bottom: 3rem;
+    position: relative;
+
+    @include grid-media($media-md) {
+      @include grid-column(6);
+      margin-bottom: 0;
+    }
+  }
+}

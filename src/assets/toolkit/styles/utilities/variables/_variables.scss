@@ -3,15 +3,14 @@
 ////
 
 // Bourbon with custom settings.
-@import 'variables-bourbon';
 @import 'bourbon/core/bourbon';
 
 // Neat with custom settings.
-@import 'variables-neat';
 @import 'bourbon-neat/core/neat';
-@import 'neat-omega/neat-omega';
+@import 'neat-omega/core/neat-omega';
 
 // Base settings.
+@import 'global';
 @import 'typography';
 @import 'colors';
 @import 'spacing';

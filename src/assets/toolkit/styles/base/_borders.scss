@@ -1,0 +1,25 @@
+////
+/// Borders
+////
+
+.border-1 {
+  border-top: .1rem solid color(grey-lighter);
+}
+
+.border-5 {
+  border-top: .5rem solid color(grey-lighter);
+}
+
+hr.border-1,
+hr.border-5 {
+  border: none;
+  background-color: color(grey-lighter);
+}
+
+hr.border-1 {
+  height: 1px;
+}
+
+hr.border-5 {
+  height: .5rem;
+}

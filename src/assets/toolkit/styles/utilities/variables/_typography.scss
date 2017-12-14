@@ -9,8 +9,8 @@ $font-stack-monaco: 'Monaco', 'Consolas', 'Lucida Console';
 /// Base Font Family Map
 $base-font-families: (
   monospace:      "#{$font-stack-monaco}",
-  sans-serif:     "'Open Sans', #{$font-stack-helvetica}",
-  sans-alt:       "'Lato', #{$font-stack-helvetica}",
+  sans-serif:     "'Lato', #{$font-stack-helvetica}",
+  sans-alt:       "'Open Sans', #{$font-stack-helvetica}",
   serif:          "'Droid Serif', #{$font-stack-georgia}"
 ) !default;
 
@@ -30,18 +30,19 @@ $monospace-font-family: unquote(map-get($base-font-families, monospace)) !defaul
 // i.e. 1.6rem == 16px
 $em-base:             62.5%; // 10px
 $base-font-size:      1.6rem !default;
-$small-font-size:     1.3rem !default;
-$lead-font-size:      2rem !default;
-$title-font-size:     5.2rem !default;
+$small-font-size:     1.4rem !default;
+$lead-font-size:      1.8rem !default;
+$display-font-size:   4.0rem !default;
+$display-font-size-md:5.2rem !default;
 $h1-font-size:        3.2rem !default;
-$h1-font-size-md:     4rem !default;
-$h2-font-size:        2.4rem !default;
-$h2-font-size-md:     3.2rem !default;
-$h3-font-size:        2.2rem !default;
-$h3-font-size-md:     2.8rem !default;
-$h4-font-size:        1.8rem !default;
-$h4-font-size-md:     2rem !default;
-$h5-font-size:        1.8rem !default;
+$h1-font-size-md:     4.8rem !default;
+$h2-font-size:        3.0rem !default;
+$h2-font-size-md:     4.0rem !default;
+$h3-font-size:        2.5rem !default;
+$h3-font-size-md:     3.0rem !default;
+$h4-font-size:        2.0rem !default;
+$h4-font-size-md:     2.6rem !default;
+$h5-font-size:        2.0rem !default;
 $h6-font-size:        1.6rem !default;
 $base-line-height:    1.5 !default;
 $heading-line-height: 1.25 !default;

@@ -1,0 +1,32 @@
+////
+/// Card
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.inline-form {
+  position: relative;
+
+  &.large {
+    input {
+      padding: $input-padding-lg;
+      height: auto;
+      line-height: 1rem;
+      height: 6rem;
+    }
+
+    button,
+    .button {
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+
+  button {
+    @include position(absolute, 0 0 null null)
+    padding: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 0 $input-radius $input-radius 0;
+  }
+}

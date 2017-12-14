@@ -1,0 +1,157 @@
+////
+/// Hero
+////
+
+// Variant
+// has-no-image
+// has-background-image
+// has-cover-image
+// has-display-title
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.hero {
+  box-shadow: inset 0 20rem 0 0 color(primary-alt-lightest);
+  position: relative;
+  margin-top: 0;
+
+  @include grid-media($media-md) {
+    box-shadow: inset 0 24rem 0 0 color(primary-alt-lightest);
+  }
+
+  @include grid-media($media-lg) {
+    margin-top: -11rem;
+  }
+
+  &.has-display-title {
+    .hero_title {
+      @include display-title;
+    }
+  }
+
+  &.has-no-image {
+
+  }
+
+  // Background image container
+  &.has-background-image {
+    position: relative;
+    margin-bottom: 7rem;
+  }
+
+  &.has-background-image {
+    .hero_container {
+      @include padding(null null 0);
+
+      @include grid-media($media-md) {
+        @include padding(null null 4rem);
+      }
+    }
+
+    // Header box when background image
+    .hero_header {
+      @include padding(3rem);
+      background-color: color(white);
+      border-bottom: 5px solid color(grey-lighter);
+      margin: 0;
+      outline: solid 1px color(white);
+      outline-offset: 10px;
+      position: relative;
+      width: 100%;
+      z-index: 4;
+
+      @include grid-media($media-md) {
+        @include padding(3rem);
+        @include grid-column(8);
+        border-bottom: none;
+      }
+
+      @include grid-media($media-lg) {
+        @include padding(4rem);
+        @include grid-column(7);
+      }
+
+      @include grid-media($media-xl) {
+        @include grid-column(6);
+        margin-left: -1px;
+      }
+    }
+
+    .hero_supertitle {
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &.has-cover-image {
+    .hero_container {
+
+    }
+  }
+
+  &.has-background-image {
+    .hero_image {
+      background-color: color(white);
+
+      img {
+        @include grid-media($media-lg) {
+          margin-top: 10.6rem;
+        }
+      }
+    }
+  }
+}
+
+.hero_image {
+  @include cover-image();
+  overflow: hidden;
+}
+
+.hero_container {
+  @include centered-container;
+  @include padding(18rem null 5rem);
+  position: relative;
+
+  @include grid-media($media-md) {
+    @include padding(21rem null null);
+  }
+}
+
+.hero_header {
+  @include grid-column(12);
+
+  @include grid-media($media-md) {
+    @include grid-column(8);
+  }
+
+  @include grid-media($media-lg) {
+    @include grid-column(6);
+    @include grid-push(1);
+  }
+
+  .button {
+    @include margin(2rem 0 0 0);
+  }
+}
+
+.hero_title {
+  @include h1;
+  margin: 0;
+}
+
+.hero_subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  margin-top: 1.2rem;
+}
+
+.hero_supertitle {
+  @include margin(-3rem null 0 null);
+  font-size: 1.6rem;
+  font-weight: $font-bold;
+
+  @include grid-media($media-md) {
+    font-size: 1.8rem;
+    margin-left: .5rem;
+  }
+}

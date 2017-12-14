@@ -1,0 +1,31 @@
+////
+/// Section Profile Cards
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+@import '../../molecules/profile_card_grid/profile_card_grid';
+
+.section-profile-cards {
+  @include padding(null null 4rem null);
+}
+
+.section-profile-cards_container {
+  @include centered-container;
+}
+
+.section-profile-cards_header {
+  @include grid-column(12);
+}
+
+.section-profile-cards_content {
+  @include grid-column(12);
+
+  .profile-card-grid {
+    $profile-card-grid: (
+      columns: 12,
+      gutter: 5px,
+    );
+
+    @include grid-collapse($profile-card-grid);
+  }
+}

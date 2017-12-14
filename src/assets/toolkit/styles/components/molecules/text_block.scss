@@ -1,0 +1,11 @@
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.text-block {
+  margin-bottom: 5rem;
+
+  hr {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

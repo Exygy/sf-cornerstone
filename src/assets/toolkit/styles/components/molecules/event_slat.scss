@@ -1,0 +1,42 @@
+////
+/// Event Slat
+////
+
+// Variant
+// has-columns
+
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.event-slat {
+  @include grid-container;
+  @include padding(2rem 0);
+  border-bottom: 1px solid color(grey-lighter);
+
+  p {
+    margin: 0;
+  }
+}
+
+.event-slat_date,
+.event-slat_title {
+  font-family: $font-sans;
+  font-weight: $font-bold;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.event-slat_date {
+  @include grid-media($media-lg) {
+    float: left;
+    width: 20rem;
+  }
+}
+
+.event-slat_content {
+  @include grid-media($media-lg) {
+    float: left;
+    width: calc(100% - 20rem);
+  }
+}

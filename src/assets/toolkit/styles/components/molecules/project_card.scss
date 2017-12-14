@@ -1,0 +1,57 @@
+////
+/// Project Card
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.project-card {
+  @include padding(3rem);
+  border: 1px solid color(grey-light);
+}
+
+.project-card_header {
+  position: relative;
+}
+
+.project-card_title {
+  @include margin(0 5rem 1rem null);
+  @include h4();
+  font-style: italic;
+}
+
+.project-card_stat {
+  @include padding(1rem);
+  background-color: color(cool-grey-lighter);
+  display: table;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.project-card_stat-name {
+  display: table-cell;
+}
+
+.project-card_stat-value {
+  display: table-cell;
+  text-align: right;
+}
+
+.project-card_subtitle {
+  @include margin(0 null 2rem null);
+  font-size: 1.8rem;
+
+  p {
+    line-height: 3rem;
+  }
+}
+
+.project-card_link {
+  font-size: 1.8rem;
+}
+
+.project-card_tag {
+  @include position(absolute, null 1rem 1rem null);
+  float: right;
+  font-size: 1.4rem;
+  font-weight: $font-bold;
+}

@@ -1,0 +1,56 @@
+////
+/// Header Group
+////
+
+// Variant
+// has-minor-header
+// has-columns
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.header-group {
+
+  // Reduces header to h3 style
+  &.has-minor-header {
+    .header-group_title {
+      @include h3();
+    }
+  }
+
+  // Adds column layout 
+  &.has-columns {
+    @include grid-container;
+
+    @include grid-media($media-md) {
+      @include grid-collapse;
+    }
+
+    .header-group_title {
+      @include grid-media($media-md) {
+        @include grid-column(4);
+      }
+    }
+
+    .header-group_subtitle {
+      @include grid-media($media-md) {
+        @include grid-column(8);
+      }
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}
+
+.header-group_title {
+  @include has-dash();
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.header-group_subtitle {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}

@@ -18,8 +18,9 @@ p {
 }
 
 a {
-  // color: $color-primary;
+  color: color(primary);
   text-decoration: underline;
+  transition: $button-transition;
 
   &:hover,
   &:active {
@@ -27,12 +28,12 @@ a {
   }
 
   &:visited {
-    color: color(secondary-darker);
+    color: color(primary);
   }
 
   &:focus {
     // box-shadow: $focus-shadow;
-    outline: 0;
+    // outline: 0;
   }
 }
 
@@ -83,13 +84,62 @@ dfn {
   font-style: normal;
 }
 
+em {
+  font-size: 1.6rem;
+  font-style: italic;
+  letter-spacig: normal;
+  text-transform: none;
+}
+
+blockquote {
+  border-left: 2px solid color(gold);
+
+  @include grid-media($media-md) {
+    @include margin(null 4rem);
+  }
+
+  p {
+    @include h4();
+    font-family: $font-serif;
+    font-style: italic;
+    padding-left: 3rem;
+  }
+}
+
 // Custom typography
 
 .text-content {
-  p,
-  ul,
-  ol {
-    max-width: $text-max-width;
+  // p,
+  // ul,
+  // ol {
+  //   max-width: $text-max-width;
+  // }
+
+  ul > p {
+    margin: 0;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: $font-sans;
+    font-weight: $font-bold;
+  }
+
+  h2 {
+    @include h4();
+    margin-top: 5rem;
+  }
+
+  h3, h4 {
+    @include h5();
+  }
+
+  h5 {
+    @include h6();
+  }
+
+  hr {
+    @extend .border-5;
+    margin-top: 5rem;
   }
 }
 
@@ -116,24 +166,21 @@ dfn {
   }
 }
 
-.background-dark {
-  background-color: color(gray-dark);
-
-  p,
-  span {
-    color: color(white);
-  }
-
-  a {
-    color: color(gray-lighter);
-
-    &:hover {
-      color: color(white);
-    }
-  }
+.background-dark,
+.has-background-dark {
+  @include background-dark();
 }
 
 .text-small {
   font-size: $h6-font-size;
   margin-top: 0;
+}
+
+.lead-text,
+.has-dropcap {
+  @include drop-cap-inline();
+}
+
+.counter-list {
+  @include counter-list();
 }

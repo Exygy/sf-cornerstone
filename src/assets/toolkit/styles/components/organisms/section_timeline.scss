@@ -1,0 +1,57 @@
+////
+/// Section Timeline
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+@import '../../molecules/timeline/timeline';
+
+.section-timeline {
+  @include padding(null null 7rem null);
+
+  &.has-background-dark {
+    @include padding(7rem null);
+    background-color: color(black);
+
+    .timeline_time {
+      &:after {
+        border: 1px solid color(grey-dark);
+      }
+    }
+
+    .icon-link {
+      color: color(primary);
+    }
+  }
+}
+
+.section-timeline_container {
+  @include centered-container;
+}
+
+.section-timeline_header {
+  @include grid-column(12);
+
+  .header-group {
+    @include grid-container;
+
+    @include grid-media($media-md) {
+      @include grid-collapse;
+    }
+
+    .header-group_title {
+      @include grid-media($media-md) {
+        @include grid-column(4);
+      }
+    }
+
+    .header-group_subtitle {
+      @include grid-media($media-md) {
+        @include grid-column(8);
+      }
+    }
+  }
+}
+
+.section-timeline_content {
+  @include grid-column(12);
+}

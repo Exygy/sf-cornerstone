@@ -1,0 +1,32 @@
+////
+/// Card Grid
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.profile-card-grid {
+  @include grid-container;
+  display: flex;
+  flex-wrap: wrap;
+
+  // Add two column layout with md breakpoint
+  &.has-four-columns--md {
+    $profile-card-grid: (
+      columns: 12,
+      gutter: 5px,
+    );
+
+    .profile-card {
+      width: 100%;
+      margin-bottom: 3rem;
+
+      @include grid-media($media-sm) {
+        @include grid-column(6, $profile-card-grid);
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(3, $profile-card-grid);
+      }
+    }
+  }
+}

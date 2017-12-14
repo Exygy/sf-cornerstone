@@ -20,7 +20,8 @@ $input-font-size: rem-calc(16) !default;
 $input-line-height: $base-line-height !default;
 $input-margin: rem-calc(10) !default;
 $input-padding: rem-calc(10) !default;
-$input-placeholder-color: color(grey-light) !default;
+$input-padding-lg: rem-calc(18) rem-calc(20) !default;
+$input-placeholder-color: color(grey-medium) !default;
 $input-radius: rem-calc(4) !default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out !default;
 

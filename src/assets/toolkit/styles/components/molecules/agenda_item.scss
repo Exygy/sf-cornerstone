@@ -1,0 +1,52 @@
+////
+/// Agenda Item
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.agenda_item {
+  @include margin(null null 0 null);
+  @include padding(null null 3rem 5rem);
+  @include custom-counter();
+  @include custom-counter-line();
+  list-style-type: none;
+
+  ol {
+    padding-left: 1.75rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.agenda_item_title {
+  @include margin(0 null null null);
+  font-size: 1.8rem;
+  font-weight: $font-normal;
+}
+
+.agenda_item_description {
+  margin-top: 0;
+}
+
+.agenda_item_minutes {
+  display: none;
+}
+
+.agenda_item_link {
+  &.button {
+    margin: 0;
+  }
+}
+
+.agenda_list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}

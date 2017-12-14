@@ -44,6 +44,14 @@
     padding: $table-padding;
   }
 
+  td {
+    font-weight: normal;
+
+    ul, ol {
+      margin-top: 0;
+    }
+  }
+
   em, small {
     font-size: $table-font-size * 0.785714; // 11px
     line-height: $table-line-height * 0.833333; // 1.25

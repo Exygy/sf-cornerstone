@@ -2,6 +2,14 @@
 /// Typography
 ////
 
+@mixin display-title {
+  font-size: $display-font-size;
+
+  @include grid-media($media-md) {
+    font-size: $display-font-size-md;
+  }
+}
+
 @mixin h1 {
   font-size: $h1-font-size;
 
@@ -64,4 +72,43 @@
   font-family: $font-sans-alt;
   letter-spacing: $header-spacing-large;
   text-transform: uppercase;
+}
+
+@mixin background-dark() {
+  background-color: color(grey-dark);
+  color: color(white);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  label {
+    color: color(white);
+  }
+
+  a {
+    color: color(white);
+
+    &:visited {
+      color: color(white);
+    }
+
+    &:hover {
+      color: color(white);
+    }
+  }
+}
+
+@mixin first-last-spacing() {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

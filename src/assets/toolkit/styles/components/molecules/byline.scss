@@ -1,0 +1,38 @@
+////
+/// Event
+////
+
+@import '../../../../golden/css/scss/utilities/utilities';
+
+.byline {
+
+}
+
+.byline_content {
+  float: left;
+}
+
+.byline_header {
+  @include has-dash();
+  margin-bottom: 1rem;
+}
+
+.byline_name {
+  margin-top: 0;
+}
+
+.byline_social {
+  width: 4rem;
+  float: right;
+}
+
+.byline_icon {
+  background-color: color(grey-lightest);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .5rem;
+  height: 4rem;
+  width: 4rem;
+}
