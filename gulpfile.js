@@ -1,5 +1,6 @@
 const assembler = require('fabricator-assemble');
 const browserSync = require('browser-sync');
+const cssBase64 = require('gulp-css-base64');
 const csso = require('gulp-csso');
 const del = require('del');
 const gulp = require('gulp');
@@ -80,6 +81,11 @@ gulp.task('styles:toolkit', () => {
     includePaths: './node_modules',
   }).on('error', sass.logError))
   .pipe(prefix('last 1 version'))
+  .pipe(cssBase64({
+    // Use only for small images, since mobile browser performance with base64
+    // on large images isn't good
+    maxWeightResource: 8192,
+  }))
   .pipe(gulpif(!config.dev, csso()))
   .pipe(gulpif(config.dev, sourcemaps.write()))
   .pipe(gulp.dest(config.styles.toolkit.dest))

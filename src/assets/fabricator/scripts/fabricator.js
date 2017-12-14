@@ -173,8 +173,8 @@ fabricator.menuToggle = () => {
   });
 
   // close menu when clicking on item (for collapsed menu view)
-  const closeMenu = () => {
-    if (!window.matchMedia(fabricator.options.mq).matches) {
+  const closeMenu = (e) => {
+    if (!window.matchMedia(fabricator.options.mq).matches && !e.target.classList.contains('f-menu__accordion-toggle')) {
       toggleClasses();
     }
   };
@@ -341,6 +341,7 @@ fabricator.accordions = () => {
   for(var i = 0; i < fabricator.dom.menuAccordions.length; i++) {
 
     fabricator.dom.menuAccordions[i].addEventListener('click', function (e) {
+      e.preventDefault();
       setActiveAccordion(e);
     });
     fabricator.dom.menuAccordions[i].parentNode.querySelectorAll('.control')[0].addEventListener('click', function(e) {

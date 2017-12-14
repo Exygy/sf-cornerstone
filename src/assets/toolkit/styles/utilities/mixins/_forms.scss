@@ -17,39 +17,40 @@
       background-color: color(primary);
     }
 
-    // &:checked + label::after{
-    //   font-family: $font-family-icon;
-    //   content: $check-icon;
-    // }
+    &:disabled + label {
+      opacity: 0.5;
 
-    // &:indeterminate + label::after{
-    //   display: block;
-    //   content: "";
-    //   width: 10px;
-    //   height: 3px;
-    //   background-color: #555555;
-    //   border-radius: 2px;
-    //   margin-left: -16.5px;
-    //   margin-top: 7px;
-    // }
+      &, &::before {
+        cursor: $input-cursor-disabled;
+      }
 
-    // &:disabled{
-    //   cursor: not-allowed;
-    // }
+      &::before {
+        background-color: $input-background-disabled;
+        box-shadow: 0 0 0 1px $input-background-disabled;
+      }
+    }
+  }
 
-    // &:disabled + label  {
-    //   opacity: 0.65;
+  input[type="checkbox"] {
+    &:checked + label::before {
+      background-image: url('../images/check-thick-white.png');
+      background-image: url('../images/check-thick-white.svg');
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 80%;
+    }
 
-    //   &::before{
-    //     background-color: $input-background-disabled;
-    //     cursor: not-allowed;
-    //   }
-    // }
+    &:focus + label::before {
+      box-shadow: 0 0 0 1px color(white), 0 0 3px 4px color(primary);
+    }
+  }
+
+  input[type="radio"]:focus + label::before {
+    box-shadow: 0 0 0 2px color(white), 0 0 0 3px color(primary), 0 0 3px 4px $input-color-focus, 0 0 7px 4px $input-color-focus;
   }
 }
 
 @mixin form-element {
-  // $height: ($input-font-size * unitless-calc($input-line-height)) + (get-side($input-padding, 'top') + get-side($input-padding, 'bottom')) - rem-calc(1);
   $height: rem-calc(45);
 
   display: block;
@@ -76,8 +77,8 @@
   &:focus {
     outline: none;
     border: $input-border-focus;
-    // background-color: $input-background-focus;
-    // box-shadow: $input-shadow-focus;
+    background-color: $input-background-focus;
+    box-shadow: $input-shadow-focus;
 
     @if has-value($input-transition) {
       transition: $input-transition;
@@ -118,7 +119,11 @@
     &:disabled,
     &[readonly] {
       background-color: $input-background-disabled;
-      cursor: not-allowed;
+      cursor: $input-cursor-disabled;
+
+      &::placeholder {
+        color: $input-color;
+      }
     }
   }
 
@@ -126,28 +131,40 @@
     display: block;
     margin-bottom: $input-margin;
   }
+}
 
-  select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: $input-background;
-    background-image: url(data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8dGl0bGU+Y2Fycm90LWRvd248L3RpdGxlPgo8cGF0aCBkPSJNMC4yIDEwLjRsMTQuNCAxNC40YzAuOCAwLjggMiAwLjggMi42IDBsMTQuNC0xNC40YzAuNC0wLjQgMC40LTEgMC4yLTEuNGwtMS40LTEuNGMtMC40LTAuNC0xLTAuNC0xLjQgMGwtMTIuNCAxMi40Yy0wLjQgMC40LTEgMC40LTEuNCAwbC0xMi4yLTEyLjJjLTAuNC0wLjQtMS0wLjQtMS40IDBsLTEuNCAxLjJjLTAuMiAwLjQtMC4yIDEgMCAxLjR6Ij48L3BhdGg+Cjwvc3ZnPgo=);
-    background-position: right 1.6rem center;
-    background-repeat: no-repeat;
-    background-size: 1.3rem;
-    color: $input-color;
-    font-family: $base-font-family;
-    font-size: $input-font-size;
-    margin: 0 0 $form-spacing;
-    padding: $input-padding;
-    padding-right: $input-padding * 3.5;
-    width: 100%;
+@mixin form-select {
+  appearance: none;
+  background-color: $input-background;
+  background-image: url('../images/arrow-down.png');
+  background-image: url('../images/arrow-down.svg');
+  background-position: right 1.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem;
+  color: $input-color;
+  font-family: $base-font-family;
+  font-size: $input-font-size;
+  height: 4.5rem;
+  margin: 0 0 $form-spacing;
+  padding: $input-padding;
+  padding-right: $input-padding * 3.5;
+  width: 100%;
 
-    &.large {
-      padding: $input-padding-lg;
-      background-position: right 2rem center;
-      line-height: 1.5;
-    }
+  &:disabled {
+    opacity: 0.5;
+    background-color: $input-background-disabled;
+    cursor: $input-cursor-disabled;
+  }
+
+  // Hide the dropdown arrow shown in newer IE versions
+  &::-ms-expand {
+    display: none;
+  }
+
+  &[multiple] {
+    height: auto;
+    background-image: none;
+    padding: $input-font-size * 1.25 $input-font-size * 1.25 0;
   }
 }
 
